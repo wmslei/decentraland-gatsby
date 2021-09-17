@@ -1,0 +1,1 @@
+export default function useFeatureFlagContext(): import("../../hooks/useAsyncMemo").AsyncMemoResult<import("../../utils/api/unleash").FeatureFlagsResponse, import("../../utils/api/unleash").FeatureFlagsResponse>;

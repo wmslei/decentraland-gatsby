@@ -1,0 +1,27 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var utils_1 = require("./utils");
+test('toPrefixedNumber', function () {
+    expect(utils_1.toPrefixedNumber(0)).toBe('0');
+    expect(utils_1.toPrefixedNumber(0, 5)).toBe('00000');
+    expect(utils_1.toPrefixedNumber(123)).toBe('123');
+    expect(utils_1.toPrefixedNumber(123, 2)).toBe('123');
+    expect(utils_1.toPrefixedNumber(123, 5)).toBe('00123');
+    expect(utils_1.toPrefixedNumber(0.123)).toBe('0.123');
+    expect(utils_1.toPrefixedNumber(0.123, 2)).toBe('00.123');
+    expect(utils_1.toPrefixedNumber(0.123, 5)).toBe('00000.123');
+    expect(utils_1.toPrefixedNumber(123.123)).toBe('123.123');
+    expect(utils_1.toPrefixedNumber(123.123, 2)).toBe('123.123');
+    expect(utils_1.toPrefixedNumber(123.123, 5)).toBe('00123.123');
+    expect(utils_1.toPrefixedNumber(-0)).toBe('0');
+    expect(utils_1.toPrefixedNumber(-0, 5)).toBe('00000');
+    expect(utils_1.toPrefixedNumber(-123)).toBe('-123');
+    expect(utils_1.toPrefixedNumber(-123, 2)).toBe('-123');
+    expect(utils_1.toPrefixedNumber(-123, 5)).toBe('-00123');
+    expect(utils_1.toPrefixedNumber(-0.123)).toBe('-0.123');
+    expect(utils_1.toPrefixedNumber(-0.123, 2)).toBe('-00.123');
+    expect(utils_1.toPrefixedNumber(-0.123, 5)).toBe('-00000.123');
+    expect(utils_1.toPrefixedNumber(-123.123)).toBe('-123.123');
+    expect(utils_1.toPrefixedNumber(-123.123, 2)).toBe('-123.123');
+    expect(utils_1.toPrefixedNumber(-123.123, 5)).toBe('-00123.123');
+});

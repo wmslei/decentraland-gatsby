@@ -1,0 +1,13 @@
+import Time from 'dayjs';
+import 'dayjs/plugin/utc';
+import 'dayjs/plugin/isToday';
+import 'dayjs/plugin/isTomorrow';
+import 'dayjs/plugin/isYesterday';
+import 'dayjs/plugin/isBetween';
+import 'dayjs/plugin/isSameOrAfter';
+import 'dayjs/plugin/isSameOrBefore';
+import 'dayjs/plugin/pluralGetSet';
+import 'dayjs/plugin/customParseFormat';
+import 'dayjs/plugin/relativeTime';
+import './plugin';
+export default Time;

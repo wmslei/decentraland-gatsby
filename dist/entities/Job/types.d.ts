@@ -1,0 +1,43 @@
+export declare type JobAttributes<P extends object = {}> = {
+    id: string;
+    name: string;
+    payload: P;
+    run_at: Date;
+    created_at: Date;
+};
+export declare type CronTime = keyof typeof TimePresets | string | Date;
+export declare const TimePresets: {
+    '@yearly': string;
+    '@monthly': string;
+    '@weekly': string;
+    '@daily': string;
+    '@eachDay': string;
+    '@hourly': string;
+    '@eachHour': string;
+    '@each2Hour': string;
+    '@each3Hour': string;
+    '@each4Hour': string;
+    '@each6Hour': string;
+    '@each12Hour': string;
+    '@minutely': string;
+    '@eachMinute': string;
+    '@each5Minute': string;
+    '@each10Minute': string;
+    '@each15Minute': string;
+    '@each30Minute': string;
+    '@secondly': string;
+    '@eachSecond': string;
+    '@each5Second': string;
+    '@each10Second': string;
+    '@each15Second': string;
+    '@each30Second': string;
+    '@weekdays': string;
+    '@weekends': string;
+};
+export declare type JobSettings = {
+    concurrency?: number;
+    memory?: boolean;
+    cron?: CronTime;
+};
+export declare type ScheduleFunction = (jobName: string, date: Date, payload?: object) => Promise<void>;
+export declare type UpdatePayloadFunction = (id: string, payload?: object) => Promise<void>;
