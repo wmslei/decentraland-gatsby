@@ -92,7 +92,7 @@
     "ddos": "^0.2.1",
     "decentraland-commons": "^5.1.0",
     "decentraland-dapps": "^12.25.4",
-    "decentraland-server": "^2.11.6",
+    "decentraland-server": "github:wmslei/decentraland-server",
     "eth-crypto": "^1.9.0",
     "express": "^4.17.1",
     "fetch-mock": "^9.11.0",
